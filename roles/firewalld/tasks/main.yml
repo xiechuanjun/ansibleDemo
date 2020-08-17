@@ -1,0 +1,4 @@
+- name: copy close_firewalld_script to client
+  copy: src=close_firewalld.sh dest=/tmp/close_firewalld.sh owner=root group=root mode=755
+- name: close firewalld
+  shell: /bin/bash /tmp/close_firewalld.sh
